@@ -3,7 +3,7 @@ import google.generativeai as genai
 from PIL import Image
 
 # 1. Setup API Key (Get one at aistudio.google.com)
-genai.configure(api_key="AIzaSyAsOzN-Gq-gLC829AxRyFKfJsOo0VPZGbE")
+genai.configure(api_key="AIzaSyCtd-KIciIyJiuaH5wMCksnYDezglYfaw4")
 model = genai.GenerativeModel('gemini-2.5-flash-lite')
 
 st.set_page_config(page_title="AI Sous Chef", page_icon="🍳")
