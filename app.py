@@ -1,6 +1,57 @@
 import streamlit as st
 import google.generativeai as genai
 from PIL import Image
+import streamlit as st
+# In your app.py
+st.sidebar.image("logo.png", width=150) # Ensure logo.png is in your GitHub folder
+st.sidebar.title("AI Sous Chef")
+st.sidebar.markdown("---")
+st.sidebar.write("⚡ Powered by Gemini 2.5 Flash")
+
+# Custom CSS for a professional, "edgy" look
+st.markdown("""
+    <style>
+    /* 1. Main background - Deep charcoal gradient */
+    .stApp {
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        color: #ffffff;
+    }
+    
+    /* 2. Glassmorphism effect for the sidebar */
+    [data-testid="stSidebar"] {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        backdrop-filter: blur(10px);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* 3. Edgy buttons - Neon border and hover glow */
+    div.stButton > button:first-child {
+        background-color: transparent;
+        color: #00f2fe;
+        border: 2px solid #00f2fe;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    div.stButton > button:first-child:hover {
+        background-color: #00f2fe;
+        color: #000000;
+        box-shadow: 0 0 20px #00f2fe;
+    }
+    
+    /* 4. Professional Headings */
+    h1, h2, h3 {
+        font-family: 'Inter', sans-serif;
+        letter-spacing: -1px;
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # 1. Setup API Key (Get one at aistudio.google.com)
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
