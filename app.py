@@ -1,13 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
 from PIL import Image
-
-# In your app.py
-st.sidebar.image("logo.png", width=150) # Ensure logo.png is in your GitHub folder
-st.sidebar.title("AI Sous Chef")
-st.sidebar.markdown("---")
-st.sidebar.write("⚡ Powered by Gemini 2.5 Flash")
-
 import streamlit as st
 # Custom CSS for a professional, "edgy" look
 st.markdown("""
